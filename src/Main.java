@@ -6,8 +6,14 @@ public class Main {
         File f = new File ("Schedules.txt");
         Scanner s = Scanner(f);
         String schedules= "";
-        While(s.hasNext())
+        While(s.hasNext()) {
+            while (s.hasNextBoolean()){
+                schedules+= s.hasNextBoolean() + " ";
+                AppointmentBook a = new AppointmentBook(readSchedule(schedules))
+            }
+        }
     }
+
     public static void main(String[] args) {
         boolean[][] schedule = new boolean[8][60];
         AppointmentBook a = new AppointmentBook(schedule);
